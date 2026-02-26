@@ -1,0 +1,22 @@
+info:
+  name: GetPetsHappinessAndSpeciesFiltered
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: http://localhost:9812/pets?minHappiness=50&species=dragon
+  params:
+    - name: minHappiness
+      value: "50"
+      type: query
+    - name: species
+      value: dragon
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

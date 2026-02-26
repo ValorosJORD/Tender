@@ -1,0 +1,24 @@
+info:
+  name: CreateHabitForNonExistingPet
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: http://localhost:9812/pets/10/habits
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Workout",
+        "category": "health",
+        "targetFrequency": 5,
+        "statBoost": "happiness"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

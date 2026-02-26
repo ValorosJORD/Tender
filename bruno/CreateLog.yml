@@ -1,0 +1,21 @@
+info:
+  name: CreateLog
+  type: http
+  seq: 18
+
+http:
+  method: POST
+  url: http://localhost:9812/pets/1/logs
+  body:
+    type: json
+    data: |-
+      {
+        "habitId": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
